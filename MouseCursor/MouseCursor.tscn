@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://q8jhh1fyftfj"]
+
+[ext_resource type="Texture2D" uid="uid://bbglkhwwfg06v" path="res://MouseCursor/vng_visuals.png" id="1_q8a6a"]
+[ext_resource type="Script" path="res://MouseCursor/MouseCursor.gd" id="2_u5c5v"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_q8a6a")
+region_enabled = true
+region_rect = Rect2(0, 0, 16.3766, 16.3233)
+script = ExtResource("2_u5c5v")

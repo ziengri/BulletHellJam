@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b734pmsupobso"]
+[gd_scene load_steps=24 format=3 uid="uid://b734pmsupobso"]
 
 [ext_resource type="Script" path="res://addons/BulletUpHell/BuHBulletProperties.gd" id="1_7irur"]
 [ext_resource type="Script" path="res://node_2d.gd" id="1_o2s3q"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://p6h48tk6jy5p" path="res://Base_Character/test.tscn" id="10_i67sk"]
 [ext_resource type="Texture2D" uid="uid://dn3td4jtpal57" path="res://icon.svg" id="10_m6ocj"]
 [ext_resource type="Script" path="res://Area2D.gd" id="11_gddmx"]
+[ext_resource type="PackedScene" uid="uid://q8jhh1fyftfj" path="res://MouseCursor/MouseCursor.tscn" id="12_vpf7e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_doq1u"]
 texture = ExtResource("9_h5wcv")
@@ -594,3 +595,5 @@ script = ExtResource("11_gddmx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
 position = Vector2(2.78259, 0.000183105)
 shape = SubResource("RectangleShape2D_7ugfh")
+
+[node name="MouseCursor" parent="." instance=ExtResource("12_vpf7e")]

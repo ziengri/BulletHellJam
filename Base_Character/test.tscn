@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Base_Character/test_state.gd" id="1_ydq0q"]
 [ext_resource type="Texture2D" uid="uid://bkuj15l5qgulp" path="res://assets/eva.png" id="2_6nlt6"]
+[ext_resource type="PackedScene" uid="uid://clbdstx6l43r7" path="res://Guns/gun.tscn" id="3_15is0"]
 [ext_resource type="Script" path="res://State Manager/State_Manager.gd" id="3_xc1u0"]
 [ext_resource type="Script" path="res://Base_Character/Idle.gd" id="4_ie3ri"]
 [ext_resource type="Script" path="res://Base_Character/Walk.gd" id="5_0gfvu"]
 [ext_resource type="Script" path="res://Base_Character/Dash.gd" id="6_y868b"]
-[ext_resource type="Script" path="res://Base_Character/Attack.gd" id="7_3lw01"]
 [ext_resource type="PackedScene" uid="uid://co6e8afpkngws" path="res://HurtBox/hurt_box.tscn" id="7_17xku"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kelsw"]
@@ -336,6 +336,10 @@ parameters/Dash/blend_position = Vector2(0.00590324, 0.11048)
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Run/blend_position = Vector2(0, 0)
 
+[node name="Weapons" type="Node2D" parent="."]
+
+[node name="Gun" parent="Weapons" instance=ExtResource("3_15is0")]
+
 [node name="State_Manager" type="Node" parent="."]
 script = ExtResource("3_xc1u0")
 
@@ -351,9 +355,6 @@ script = ExtResource("6_y868b")
 [node name="Timer" type="Timer" parent="State_Manager/Dash"]
 wait_time = 0.3
 one_shot = true
-
-[node name="Attack" type="Node" parent="State_Manager"]
-script = ExtResource("7_3lw01")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.386, 2.386)
